@@ -36,7 +36,9 @@ The backup will be stored in */path/on/host/*FeedTheBeast/backups/*Year-Month-Da
 - First of all you have to stop your minecraft server. `docker stop mc-server`
 - Now make sure to save your actuall world `mv world world.bak` inside */path/on/host/FeedTheBeast/*
 - Unzip your backup to */path/on/host/FeedTheBeast/* and make sure the **world** folder is present after that
+
 +++
+
 - check the permissions of the restored **world** folder. In my case I had to `chown -R 1000:1000 world/`. Check other folders with `ls -lA` inside */path/on/host/FeedTheBeast*
 - if server start fails `docker start mc-server` check the logs with `docker logs mc-server`
 - maybe you have to `mv session.lock session.bak` inside the restored **world** folder
